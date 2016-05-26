@@ -39,23 +39,29 @@ eACommander is included as part of the BGM SDK.
 [The latest version can be found here](https://www.silabs.com/products/wireless/bluetooth/Pages/blue-gecko-bluetooth-module-getting-started.aspx).
 
 Depending upon where you have installed the BGM SDK, eACommander can be found relative to the install path.
+
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Path.png">
 
 The eACommander executable:
+
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_executable.png">
 
 (**NOTE:** Your WSTK should be connected to a host computer and your BGM111 target should be connected to the WSTK prior to starting eACommander.)
 
 If your WSTK is properly connected to and detected by your host computer, eACommander should display the serial number of the embeded J-Link device at the top of the screen:
+
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_J-Link.png">
 
 Pressing the "Connect" button should result in something akin to the following:
+
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_WSTK_Connected.png">
 
 Change the "Debug Mode:" dropdown menu selection to "Out" should result in the "MCU Information" box automatically populating with the information of the attached BGM111 target device:
+
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Debug_Mode_Out.png">
 
 Select the "Flash" menu item from the left scroll bar:
+
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Flash.png">
 
 ### Tag Connect
