@@ -34,6 +34,30 @@ The minimum pins required to program a BGM111 module are:
 
 Often referred to in documentation as **eACommander** (because of its executable name eACommander.exe), this tool is used to program the flash on a BGM111 target.
 
+eACommander is included as part of the BGM SDK.
+
+[The latest version can be found here](https://www.silabs.com/products/wireless/bluetooth/Pages/blue-gecko-bluetooth-module-getting-started.aspx).
+
+Depending upon where you have installed the BGM SDK, eACommander can be found relative to the install path.
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Path.png">
+
+The eACommander executable:
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_executable.png">
+
+(**NOTE:** Your WSTK should be connected to a host computer and your BGM111 target should be connected to the WSTK prior to starting eACommander.)
+
+If your WSTK is properly connected to and detected by your host computer, eACommander should display the serial number of the embeded J-Link device at the top of the screen:
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_J-Link.png">
+
+Pressing the "Connect" button should result in something akin to the following:
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_WSTK_Connected.png">
+
+Change the "Debug Mode:" dropdown menu selection to "Out" should result in the "MCU Information" box automatically populating with the information of the attached BGM111 target device:
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Debug_Mode_Out.png">
+
+Select the "Flash" menu item from the left scroll bar:
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Flash.png">
+
 ### Tag Connect
 
 This adapter is designed to work with [Tag-Connect](http://www.tag-connect.com/).
@@ -49,6 +73,15 @@ You can order these boards from OSH Park:
 <a href="https://oshpark.com/shared_projects/8CRzoYDR"><img src="https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
 Or use the included Gerber files to have them manufactured elsewhere.
+
+### BOM
+
+The Bill of Materials for this board consists of only three components.
+
+| Designator: | Quantity: | Cost: | Part Number: | Note: | Footprint: | Link: |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| J1 | 1 | $0.4400 | 54601-906WPLF | RJ12 Jack | http://portal.fciconnect.com/Comergent//fci/drawing/c-bmj-0082.pdf | http://www.newark.com/fci/54601-906wplf/cat3-rj12-modular-jack-6-position/dp/51M7960?ost=54601-906WPLF&selectedCategoryId=&categoryName=All+Categories&categoryNameResp=All+Categories |
+| P1, P2 | 2 | $3.2400 | FLE-110-01-G-DV | 2x20 Female Header, 1.27mm Pitch | http://www.farnell.com/cad/320900.pdf | http://www.newark.com/samtec/fle-110-01-g-dv/board-board-connector-socket-20/dp/11P4413 |
 
 ### Schematic
 
