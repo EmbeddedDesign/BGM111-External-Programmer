@@ -1,0 +1,10 @@
+#KiCad temp files
+*.bak
+*.bck
+
+# Project files
+/datasheets
+
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
