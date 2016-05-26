@@ -10,13 +10,14 @@ Pinouts for the external programming headers on the BGM111 WSTK can be found in 
 
 ### External Programming headers on the BGM111 WSTK
 
-![BGM111_WSTK_Debug_Connector](/images/BGM111_WSTK_Debug_Connector.png =540x)
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/BGM111_WSTK_Debug_Connector.png" width="540">
 
-![BGM111_WSTK_Simplicity_Connector](/images/BGM111_WSTK_Simplicity_Connector.png =540x)
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/BGM111_WSTK_Simplicity_Connector.png" width="540">
 
 ### Process
 
 The minimum pins required to program a BGM111 module are:
+
 | Signal | BGM111 Pin | WSTK Pin |
 | --- | --- | --- |
 | Reset |  | Debug 10 |
