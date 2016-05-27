@@ -78,7 +78,7 @@ For unknown reasons, it may occasionally take a few tries to get a target device
 If you encounter errors:
 * Ensure that the power switch on the WSTK is in "AEM" mode
   * Ensure that your target board is not consuming too much power
-  * The target board is powered through the WSTK's onboard LDO and drawing too much power may result in a brownout
+  * The target board is powered through the WSTK's onboard LDO [TI LP3878-ADJ](http://www.ti.com/product/LP3878-ADJ) (rated at 800mA) and drawing too much power may result in a brownout
 * Retry pressing the "Flash EFM32" button
 * "Disconnect" and "Connect" the J-Link debugger using the button in the top-left of eACommander
 * Disconnect everything and repeat the above steps
