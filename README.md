@@ -10,7 +10,7 @@ Pinouts for the external programming headers on the BGM111 WSTK (Wireless Starte
 
 ### External Programming headers on the BGM111 WSTK
 
-<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/BTM111_WSTK_Header_Location.png" width="540">
+<img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/BGM111_WSTK_Header_Location.png" width="540">
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/BGM111_WSTK_Debug_Connector.png" width="540">
 
