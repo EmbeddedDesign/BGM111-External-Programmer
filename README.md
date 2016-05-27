@@ -28,7 +28,7 @@ The minimum pins required to program a BGM111 module are:
 | SWCLK | 21 (PF0) | Debug 4 |
 | SWDIO | 22 (PF1) | Debug 2 |
 
-(**NOTE:** It is important to note that Vdevice on the Debug connector is a refernce voltage for the prorammer and is insufficient to power a target BGM111. Power must be taken from the VMCU pin of the Simplicity connector.)
+(**NOTE:** It is important to note that Vdevice on the Debug connector is a reference voltage for the programmer and is insufficient to power a target BGM111. Power must be taken from the VMCU pin of the Simplicity connector.)
 
 ### energyAware Commander
 
@@ -38,37 +38,54 @@ eACommander is included as part of the BGM SDK.
 
 [The latest version can be found here](https://www.silabs.com/products/wireless/bluetooth/Pages/blue-gecko-bluetooth-module-getting-started.aspx).
 
-Depending upon where you have installed the BGM SDK, eACommander can be found relative to the install path.
+
+Depending upon where you have installed the BGM SDK, the eACommander folder can be found relative to the install path.
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Path.png">
+
+(**NOTE:** Your WSTK should be connected to a host computer and your BGM111 target should be connected to the WSTK prior to starting eACommander.)
 
 The eACommander executable:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_executable.png">
 
-(**NOTE:** Your WSTK should be connected to a host computer and your BGM111 target should be connected to the WSTK prior to starting eACommander.)
-
-If your WSTK is properly connected to and detected by your host computer, eACommander should display the serial number of the embeded J-Link device at the top of the screen:
+If your WSTK is properly connected to and detected by your host computer, eACommander should display the serial number of the on-board SEGGER J-Link debugger at the top of the screen:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_J-Link.png">
 
-Pressing the "Connect" button should result in something akin to the following:
+Press the "Connect" button.
+This should result in the "Board Information" box automatically populating with the information of the attached WSTK board:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_WSTK_Connected.png">
 
-Change the "Debug Mode:" dropdown menu selection to "Out" should result in the "MCU Information" box automatically populating with the information of the attached BGM111 target device:
+Change the "Debug Mode:" drop-down menu selection to "Out".
+This should result in the "MCU Information" box automatically populating with the information of the attached BGM111 target device:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Debug_Mode_Out.png">
 
-Select the "Flash" menu item from the left scroll bar:
+Select the "Flash" menu item from the left scroll bar.
+Select the binary file you wish to flash with the "Browse..." button in the "Flash EFM32" box.
+Press the "Flash EFM32" button.
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Flash.png">
+
+For whatever reason, it occasionally takes a few tries to get a target device to program successfully.
+
+If you encounter errors:
+* Ensure that the power switch on the WSTK is in "AEM" mode
+  * Ensure that your target board is not consuming too much power
+  * The target board is powered through the WSTK's onboard LDO and drawing too much power may result in a brownout
+* Retry pressing the "Flash EFM32" button
+* "Disconnect" and "Connect" the J-Link debugger using the button in the top-left of eACommander
+* Disconnect everything and repeat the above steps
 
 ### Tag Connect
 
 This adapter is designed to work with [Tag-Connect](http://www.tag-connect.com/).
 
-Specifically, [TC2030-MCP-NL](http://www.tag-connect.com/TC2030-MCP-NL) (because of its small footprint) or [TC2030-MCP](http://www.tag-connect.com/TC2030-MCP).
+Specifically, [TC2030-MCP-NL](http://www.tag-connect.com/TC2030-MCP-NL) (because of its small [footprint](http://www.tag-connect.com/Materials/TC2030-MCP-NL%20PCB%20Footprint.pdf)) or [TC2030-MCP](http://www.tag-connect.com/TC2030-MCP).
+
+Tag-Connect footprints for most common CAD packages can be [found here](http://www.tag-connect.com/tag-connect-downloads).
 
 A retaining clip for the TC2030-MCP-NL can be [found here](http://www.tag-connect.com/TC2030-CLIP).
 
@@ -84,7 +101,7 @@ Or use the included Gerber files to have them manufactured elsewhere.
 
 The Bill of Materials for this board consists of only three components.
 
-| Designator: | Quantity: | Cost: | Part Number: | Note: | Footprint: | Link: |
+| Designator: | Quantity: | Cost: | Part Number:   | Note:   | Footprint: | Link: |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | J1 | 1 | $0.4400 | 54601-906WPLF | RJ12 Jack | http://portal.fciconnect.com/Comergent//fci/drawing/c-bmj-0082.pdf | http://www.newark.com/fci/54601-906wplf/cat3-rj12-modular-jack-6-position/dp/51M7960?ost=54601-906WPLF&selectedCategoryId=&categoryName=All+Categories&categoryNameResp=All+Categories |
 | P1, P2 | 2 | $3.2400 | FLE-110-01-G-DV | 2x20 Female Header, 1.27mm Pitch | http://www.farnell.com/cad/320900.pdf | http://www.newark.com/samtec/fle-110-01-g-dv/board-board-connector-socket-20/dp/11P4413 |
@@ -98,6 +115,14 @@ The Bill of Materials for this board consists of only three components.
 ### Layout
 
 ![BGM111_External_Programmer_Layout](/images/BGM111_External_Programmer_Layout.png)
+
+### Adapter mounted on WSTK
+
+![BGM111_WSTK_Adapter_Top](/images/BGM111_WSTK_Adapter_Top.jpg)
+
+(**NOTE:** The adapter may need to be seated slightly askew to properly mate with the headers on the WSTK. This is due to the uneven height of the Debug and Simplicity connectors on the WSTK.)
+
+![BGM111_WSTK_Adapter_Side](/images/BGM111_WSTK_Adapter_Side.jpg)
 
 ## License
 
