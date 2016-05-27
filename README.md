@@ -1,6 +1,6 @@
 # BGM111 External Programmer 
 
-An external programming adapter for Silicon Labs BGM111 devices.
+An external programming adapter for Silicon Labs BGM111 modules.
 
 ## What you need to know
 
@@ -16,7 +16,7 @@ Pinouts for the external programming headers on the BGM111 WSTK (Wireless Starte
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/BGM111_WSTK_Simplicity_Connector.png" width="540">
 
-### Process
+### Connections
 
 The minimum pins required to program a BGM111 module are:
 
@@ -28,48 +28,52 @@ The minimum pins required to program a BGM111 module are:
 | SWCLK | 21 (PF0) | Debug 4 |
 | SWDIO | 22 (PF1) | Debug 2 |
 
-(**NOTE:** It is important to note that Vdevice on the Debug connector is a reference voltage for the programmer and is insufficient to power a target BGM111. Power must be taken from the VMCU pin of the Simplicity connector.)
+(**NOTE:** It is important to note that Vdevice on the Debug connector is a reference voltage for the programmer and is insufficient to power a target BGM111. Power must be sourced from the VMCU pin of the Simplicity connector.)
 
 ### energyAware Commander
 
-Often referred to in documentation as **eACommander** (because of its executable name eACommander.exe), this tool is used to program the flash on a BGM111 target.
+Often referred to in documentation as **eACommander** (because of its executable name **eACommander.exe**), this tool is used to program the flash on a BGM111 target.
 
-eACommander is included as part of the BGM SDK.
+**eACommander** is included as part of the BGM SDK.
 
 [The latest version can be found here](https://www.silabs.com/products/wireless/bluetooth/Pages/blue-gecko-bluetooth-module-getting-started.aspx).
 
 
-Depending upon where you have installed the BGM SDK, the eACommander folder can be found relative to the install path.
+Depending upon where you have installed the BGM SDK, the **eACommander** folder can be found relative to the install path.
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Path.png">
 
-(**NOTE:** Your WSTK should be connected to a host computer and your BGM111 target should be connected to the WSTK prior to starting eACommander.)
+(**NOTE:** Your WSTK *should* be connected to a host computer and your BGM111 target should be connected to the WSTK prior to starting **eACommander**.)
 
-The eACommander executable:
+The **eACommander** executable:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_executable.png">
 
-If your WSTK is properly connected to and detected by your host computer, eACommander should display the serial number of the on-board SEGGER J-Link debugger at the top of the screen:
+If your WSTK is properly connected to and detected by your host computer, **eACommander** should display the serial number of the on-board SEGGER J-Link debugger at the top of the screen:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_J-Link.png">
 
-Press the "Connect" button.
-This should result in the "Board Information" box automatically populating with the information of the attached WSTK board:
+Press the "**Connect**" button.
+This should result in the "**Board Information**" box automatically populating with the information of the attached WSTK board:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_WSTK_Connected.png">
 
-Change the "Debug Mode:" drop-down menu selection to "Out".
-This should result in the "MCU Information" box automatically populating with the information of the attached BGM111 target device:
+Change the "**Debug Mode:**" drop-down menu selection to "**Out**".
+
+This should result in the "**MCU Information**" box automatically populating with the information of the attached BGM111 target device:
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Debug_Mode_Out.png">
 
-Select the "Flash" menu item from the left scroll bar.
-Select the binary file you wish to flash with the "Browse..." button in the "Flash EFM32" box.
-Press the "Flash EFM32" button.
+Select the "**Flash**" menu item from the left scroll bar.
+
+Select the binary file you wish to flash with the "**Browse...**" button in the "**Flash EFM32**" box.
+
+Press the "**Flash EFM32**" button.
 
 <img src="https://raw.githubusercontent.com/EmbeddedDesign/BGM111-External-Programmer/master/images/eACommander_Flash.png">
 
-For whatever reason, it occasionally takes a few tries to get a target device to program successfully.
+
+For unknown reasons, it may occasionally take a few tries to get a target device to program successfully.
 
 If you encounter errors:
 * Ensure that the power switch on the WSTK is in "AEM" mode
@@ -91,11 +95,11 @@ A retaining clip for the TC2030-MCP-NL can be [found here](http://www.tag-connec
 
 ### Ordering Boards
 
-You can order these boards from OSH Park:
+You may order a set of three (3) of the PCBs for these programming boards from OSH Park for ~$5.45:
 
 <a href="https://oshpark.com/shared_projects/8CRzoYDR"><img src="https://a800d827b6de8403a51e-6ffc2e718631809086ea40332b2055f7.ssl.cf1.rackcdn.com/assets/badge-5b7ec47045b78aef6eb9d83b3bac6b1920de805e9a0c227658eac6e19a045b9c.png" alt="Order from OSH Park"></img></a>
 
-Or use the included Gerber files to have them manufactured elsewhere.
+Alternatively, feel free to use the included Gerber files to have them manufactured elsewhere.
 
 ### BOM
 
