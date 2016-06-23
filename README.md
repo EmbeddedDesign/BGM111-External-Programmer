@@ -28,7 +28,7 @@ The minimum pins required to program a BGM111 module are:
 | SWCLK | 21 (PF0) | Debug 4 |
 | SWDIO | 22 (PF1) | Debug 2 |
 
-(**NOTE:** It is important to note that Vdevice on the Debug connector is a reference voltage for the programmer and is insufficient to power a target BGM111. Power must be sourced from the VMCU pin of the Simplicity connector.)
+(**NOTE:** It is important to note that Vdevice on the Debug connector is a reference voltage for the programmer and is insufficient to power a target BGM111. Power must be sourced from the VMCU pin of the Simplicity connector or from an external source.)
 
 ### energyAware Commander
 
@@ -103,7 +103,7 @@ Alternatively, feel free to use the included Gerber files to have them manufactu
 
 ### BOM
 
-The Bill of Materials for this board consists of only three components.
+The Bill of Materials for this board consists of only two components.
 
 | Designator: | Quantity: | Cost: | Part Number:   | Note:   | Footprint: | Link: |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
