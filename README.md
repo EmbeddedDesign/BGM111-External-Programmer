@@ -122,11 +122,11 @@ The Bill of Materials for this board consists of only two components.
 
 ### Adapter mounted on WSTK
 
-![BGM111_WSTK_Adapter_Top](/images/BGM111_WSTK_Adapter_Top.jpg)
+![BGM111_WSTK_Adapter_Top](/images/BGM111_WSTK_Adapter_Top.png)
 
 (**NOTE:** The adapter may need to be seated slightly askew to properly mate with the headers on the WSTK. This is due to the uneven height of the Debug and Simplicity connectors on the WSTK.)
 
-![BGM111_WSTK_Adapter_Side](/images/BGM111_WSTK_Adapter_Side.jpg)
+![BGM111_WSTK_Adapter_Side](/images/BGM111_WSTK_Adapter_Side.png)
 
 ## License
 
